@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1fa2ff 12%, #12d8fa 51%, #a6ffcb 100%);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s ease; 
+}
+
+/* Różne style tła w zależności od pogody */
+body.sunny {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); /* Ciepłe, słoneczne */
+}
+
+body.cold {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); /* Chłodno / śnieg */
+}
+
+body.rainy {
+    background: linear-gradient(135deg, #4ca1af 0%, #2c3e50 100%); /* Deszcz / pochmurno */
+}
+
+.weather-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #1fa2ff;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.weather-result {
+    font-size: 16px;
+    color: #444;
+    margin-top: 15px;
+}
